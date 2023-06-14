@@ -5,17 +5,17 @@ const dotenv = require('dotenv');
 const TOKEN = (process.env.TOKEN);
 let client = new discord.Client()
 
-CLIENT_ID = "The bot's client id's"
-IMAGE_NAME = "The name/key of the images"
-LARGE_TEXT = "Large text on the status"
-SMALL_TEXT = "Small text on the status"
-LINK = "A twitch link (Example: https://twitch.tv/rinzxxdc)"
+CLIENT_ID = "951397716934668308"
+IMAGE_NAME = ".gg/societea"
+LARGE_TEXT = ".gg/societea"
+SMALL_TEXT = "Join Now!"
+LINK = "https://discord.gg/societea"
  
 client.on("ready", () => {
     rpcGenerator.getRpcImage(CLIENT_ID, IMAGE_NAME)
     .then(image => {
         let presence = new rpcGenerator.Rpc()
-        .setName("twitch")
+        .setName("societea")
         .setUrl(LINK)
         .setType("STREAMING")
         .setApplicationId(CLIENT_ID)
